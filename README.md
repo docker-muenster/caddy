@@ -1,15 +1,11 @@
 # caddy
 
-```
-docker build -t local/caddy .
-```
 
 ```
 docker run \
-  --volume $PWD/Caddyfile:/Caddyfile \
-  --volume $PWD/certs:/root/.caddy \
-  --volume $PWD/www:/var/www \
+  --volume $PWD/Caddyfile:/etc/caddy/Caddyfile \
+  --volume $PWD/certs:/var/lib/caddy \
   --publish 80:80 \
   --publish 443:443 \
-  local/caddy
+  docker-muenster/caddy:master
 ```
