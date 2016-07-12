@@ -1,4 +1,5 @@
-sub.example.com {
-  tls email@domain.com
-  proxy / server.local:8888
-}
+:80
+gzip
+log stdout
+root /var/www
+browse /var/www
