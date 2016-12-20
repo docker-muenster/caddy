@@ -7,7 +7,7 @@ RUN apk --no-cache add curl ca-certificates \
   && curl -sfSL "https://caddyserver.com/download/build?os=linux&arch=$ARCH" \
     | tar -xz -C /tmp \
   && mv /tmp/caddy /usr/bin/caddy \
-  && mkdir /var/www
+  && mkdir /var/www \
   && apk del curl
   # FIXME! checksum
 
