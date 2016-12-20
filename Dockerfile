@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-RUN apk --no-cache add curl ca-certificates
+RUN apk --no-cache add curl ca-certificates git
 
 # ARG CADDY_VERSION=0.9.3
 ARG CADDY_FEATURES=awslambda,cors,expires,filemanager,git,hugo,ipfilter,jsonp,jwt,locale,mailout,minify,multipass,prometheus,ratelimit,realip,search,upload,cloudflare,digitalocean,dnsimple,dyn,gandi,googlecloud,linode,namecheap,rfc2136,route53,vultr
